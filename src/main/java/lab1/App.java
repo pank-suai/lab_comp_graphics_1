@@ -1,4 +1,4 @@
-package su.pank.lab1;
+package lab1;
 
 import org.lwjgl.opengl.GL;
 
@@ -22,6 +22,8 @@ class App{
         glfwSetWindowPos(window, 50, 50);
         glfwMakeContextCurrent(window);
         GL.createCapabilities();
+
+        // Render loop
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
 
@@ -38,5 +40,9 @@ class App{
             glfwSwapBuffers(window);
             glfwPollEvents();
         }
+
+        // Завершение работы приложения
+        glfwDestroyWindow(window);
+        glfwTerminate();
     }
 }

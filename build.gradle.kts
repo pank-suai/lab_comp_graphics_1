@@ -28,5 +28,5 @@ dependencies {
 }
 
 application {
-    mainClass = "su.pank.lab1.App"
+    mainClass = "lab1.App"
 }
